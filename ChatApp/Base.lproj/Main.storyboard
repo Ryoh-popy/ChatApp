@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="828" y="-1.4778325123152709"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="2Ru-pX-NkY">
             <objects>
-                <viewController id="824-5n-V7h" sceneMemberID="viewController">
+                <viewController id="824-5n-V7h" customClass="RegisterViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wnE-We-PR3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,9 +71,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y4p-p6-ocv">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="y4p-p6-ocv">
                                 <rect key="frame" x="67" y="109" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9tr-Hj-pDa" appends="YES" id="hTG-75-TE0"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rI2-4n-D5B"/>
@@ -81,10 +85,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qp6-xg-ZM2"/>
                     <connections>
+                        <outlet property="emalTextField" destination="18k-l3-pgN" id="85a-4T-VeT"/>
+                        <outlet property="passwordTextField" destination="PQX-jJ-45v" id="jCR-AA-Arw"/>
+                        <outlet property="profileImageView" destination="y4p-p6-ocv" id="qmn-hm-M3x"/>
                         <segue destination="ags-ez-eae" kind="show" id="DpD-WK-EPv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGZ-OO-Z5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9tr-Hj-pDa"/>
             </objects>
             <point key="canvasLocation" x="1572" y="-1.4778325123152709"/>
         </scene>
