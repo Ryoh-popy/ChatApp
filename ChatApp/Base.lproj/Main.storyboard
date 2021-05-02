@@ -186,7 +186,7 @@
         <!--Item 1-->
         <scene sceneID="njP-2B-iKe">
             <objects>
-                <viewController id="Zyk-2s-Eqk" sceneMemberID="viewController">
+                <viewController id="Zyk-2s-Eqk" customClass="ChatViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="60r-5L-46B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,12 +216,19 @@
                                 <rect key="frame" x="280" y="695" width="45" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="send:" destination="Zyk-2s-Eqk" eventType="touchUpInside" id="YCn-ls-yIk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aOF-7r-J4P"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="azL-zx-dtq"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="zpl-xv-1OR" id="qjL-9M-DgE"/>
+                        <outlet property="tableView" destination="QKK-bN-tq2" id="sdM-wf-kBN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iep-gX-5iz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +237,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="703-gd-IQd">
             <objects>
-                <tabBarController id="ags-ez-eae" sceneMemberID="viewController">
+                <tabBarController id="ags-ez-eae" customClass="TabBarController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="NDl-qd-kjH"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j6N-sX-jcK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

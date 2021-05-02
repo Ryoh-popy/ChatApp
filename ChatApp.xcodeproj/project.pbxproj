@@ -16,6 +16,10 @@
 		A92F5EE32635008800FF84DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92F5EE12635008800FF84DF /* LaunchScreen.storyboard */; };
 		A951751A263A5BC5002C919F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517519263A5BC5002C919F /* RegisterViewController.swift */; };
 		A951751D263A5BFB002C919F /* CheckPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951751C263A5BFB002C919F /* CheckPermission.swift */; };
+		A9517520263CEC26002C919F /* SendToDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951751F263CEC26002C919F /* SendToDBModel.swift */; };
+		A9517523263EAA13002C919F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517522263EAA13002C919F /* TabBarController.swift */; };
+		A9517526263ECC16002C919F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517525263ECC16002C919F /* ChatViewController.swift */; };
+		A9517529263F5B92002C919F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517528263F5B91002C919F /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		A92F5EE42635008800FF84DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9517519263A5BC5002C919F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A951751C263A5BFB002C919F /* CheckPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPermission.swift; sourceTree = "<group>"; };
+		A951751F263CEC26002C919F /* SendToDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDBModel.swift; sourceTree = "<group>"; };
+		A9517522263EAA13002C919F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A9517525263ECC16002C919F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A9517528263F5B91002C919F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		AD30420497CF8CE323FE2FC6 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +101,8 @@
 			children = (
 				A92F5EDA2635008500FF84DF /* ViewController.swift */,
 				A9517519263A5BC5002C919F /* RegisterViewController.swift */,
+				A9517522263EAA13002C919F /* TabBarController.swift */,
+				A9517525263ECC16002C919F /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				A951751C263A5BFB002C919F /* CheckPermission.swift */,
+				A951751F263CEC26002C919F /* SendToDBModel.swift */,
+				A9517528263F5B91002C919F /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,8 +241,12 @@
 			files = (
 				A951751D263A5BFB002C919F /* CheckPermission.swift in Sources */,
 				A92F5EDB2635008500FF84DF /* ViewController.swift in Sources */,
+				A9517526263ECC16002C919F /* ChatViewController.swift in Sources */,
+				A9517529263F5B92002C919F /* Message.swift in Sources */,
 				A92F5ED72635008500FF84DF /* AppDelegate.swift in Sources */,
 				A92F5ED92635008500FF84DF /* SceneDelegate.swift in Sources */,
+				A9517523263EAA13002C919F /* TabBarController.swift in Sources */,
+				A9517520263CEC26002C919F /* SendToDBModel.swift in Sources */,
 				A951751A263A5BC5002C919F /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
