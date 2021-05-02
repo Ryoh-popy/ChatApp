@@ -10,28 +10,55 @@ import Firebase
 // Firebaseで事足りるが一応インポート
 import FirebaseAuth
 
-class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,SendProfileOKDelegate {
+
+    
     
     @IBOutlet weak var emalTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
+    
+    var sendToDBModel = SendToDBModel()
+    var urlString = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let checkModel = CheckPermission()
         checkModel.showCheckPermission()
+        sendToDBModel.sendProfileOKDelegate = self
         
         // Do any additional setup after loading the view.
     }
     
     @IBAction func SignUp(_ sender: Any) {
-        //emalTextFieldgとpasswordTextFieldが空でない確認
+        //emalTextFieldgとpasswordTextFieldが空でない場合
+        if emalTextField.text?.isEmpty != true && passwordTextField.text?.isEmpty != true , let image = profileImageView.image{
+            
+            // ユーザーを作る
+            Auth.auth().createUser(withEmail: emalTextField.text!, password: passwordTextField.text!){(result,error) in
+                
+                if error != nil{
+                    print(error.debugDescription)
+                    return
+                }
+                
+                let data = image.jpegData(compressionQuality:1.0)
+                //登録
+                self.sendToDBModel.sendProfileImageData(data:data!)
+                //emailTextField、profileImage値
+            }
+        }
         
-        //登録
+    }
+    
+    func sendProfileOKDelegate(url: String) {
         
-        //emailTextField、profileImage値
-        
+        urlString = url
+        if urlString.isEmpty != true{
+            
+            self.performSegue(withIdentifier: "chat", sender: nil)
+        }
     }
     
     @IBAction func tapImageView(_ sender: Any) {
