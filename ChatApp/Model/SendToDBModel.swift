@@ -47,10 +47,9 @@ class SendToDBModel{
                     return
                 }
                 
-                UserDefaults.standard.setValue(url?.absoluteURL,forKey:"userImage")
+                UserDefaults.standard.setValue(url?.absoluteString,forKey:"userImage")
                 self.sendProfileOKDelegate?.sendProfileOKDelegate(url: url!.absoluteString)
             }
-            
         }
         
         // a

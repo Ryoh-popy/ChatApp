@@ -24,6 +24,7 @@
 		A951755C263F79DB002C919F /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A951755A263F79DB002C919F /* MessageCell.xib */; };
 		A9517564263F92A4002C919F /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517563263F92A4002C919F /* RoomViewController.swift */; };
 		A9517567263F9546002C919F /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517566263F9546002C919F /* RoomModel.swift */; };
+		A979CD6A263FB79500BA9DC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A979CD69263FB79500BA9DC1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A951755A263F79DB002C919F /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		A9517563263F92A4002C919F /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		A9517566263F9546002C919F /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
+		A979CD69263FB79500BA9DC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AD30420497CF8CE323FE2FC6 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				A92F5EDF2635008800FF84DF /* Assets.xcassets */,
 				A92F5EE12635008800FF84DF /* LaunchScreen.storyboard */,
 				A92F5EE42635008800FF84DF /* Info.plist */,
+				A979CD69263FB79500BA9DC1 /* GoogleService-Info.plist */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			files = (
 				A92F5EE32635008800FF84DF /* LaunchScreen.storyboard in Resources */,
 				A951755C263F79DB002C919F /* MessageCell.xib in Resources */,
+				A979CD6A263FB79500BA9DC1 /* GoogleService-Info.plist in Resources */,
 				A92F5EE02635008800FF84DF /* Assets.xcassets in Resources */,
 				A92F5EDE2635008500FF84DF /* Main.storyboard in Resources */,
 			);
