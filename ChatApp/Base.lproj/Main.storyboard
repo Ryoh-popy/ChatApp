@@ -106,7 +106,7 @@
         <!--Item 2-->
         <scene sceneID="qvq-8h-Pcl">
             <objects>
-                <viewController id="on3-aR-uUe" sceneMemberID="viewController">
+                <viewController id="on3-aR-uUe" customClass="RoomViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FiX-7R-2So">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,11 +116,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yEO-pM-yYR">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomCell" rowHeight="118" id="yEO-pM-yYR">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yEO-pM-yYR" id="FEd-OD-J4q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -132,17 +132,18 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="8tn-Sw-Jwg"/>
                     <connections>
-                        <segue destination="Tft-yh-EwM" kind="show" id="eOZ-Qs-GnQ"/>
+                        <outlet property="tableView" destination="tud-u0-vzr" id="F5w-ee-1Ng"/>
+                        <segue destination="Tft-yh-EwM" kind="show" identifier="roomChat" id="eOZ-Qs-GnQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKi-5k-KYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3112.8000000000002" y="374.6305418719212"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="Ofy-qP-0B5">
             <objects>
-                <viewController id="Tft-yh-EwM" sceneMemberID="viewController">
+                <viewController id="Tft-yh-EwM" customClass="ChatViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0K-Cm-OkX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ya1-hv-Tj0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3797.5999999999999" y="374.6305418719212"/>
+            <point key="canvasLocation" x="3900" y="375"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="njP-2B-iKe">

@@ -22,6 +22,8 @@
 		A9517529263F5B92002C919F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517528263F5B91002C919F /* Message.swift */; };
 		A951755B263F79DB002C919F /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517559263F79DB002C919F /* MessageCell.swift */; };
 		A951755C263F79DB002C919F /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A951755A263F79DB002C919F /* MessageCell.xib */; };
+		A9517564263F92A4002C919F /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517563263F92A4002C919F /* RoomViewController.swift */; };
+		A9517567263F9546002C919F /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517566263F9546002C919F /* RoomModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		A9517528263F5B91002C919F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A9517559263F79DB002C919F /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A951755A263F79DB002C919F /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		A9517563263F92A4002C919F /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		A9517566263F9546002C919F /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		AD30420497CF8CE323FE2FC6 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,7 @@
 				A9517519263A5BC5002C919F /* RegisterViewController.swift */,
 				A9517522263EAA13002C919F /* TabBarController.swift */,
 				A9517525263ECC16002C919F /* ChatViewController.swift */,
+				A9517563263F92A4002C919F /* RoomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 				A951751C263A5BFB002C919F /* CheckPermission.swift */,
 				A951751F263CEC26002C919F /* SendToDBModel.swift */,
 				A9517528263F5B91002C919F /* Message.swift */,
+				A9517566263F9546002C919F /* RoomModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,7 +258,9 @@
 				A9517529263F5B92002C919F /* Message.swift in Sources */,
 				A92F5ED72635008500FF84DF /* AppDelegate.swift in Sources */,
 				A951755B263F79DB002C919F /* MessageCell.swift in Sources */,
+				A9517564263F92A4002C919F /* RoomViewController.swift in Sources */,
 				A92F5ED92635008500FF84DF /* SceneDelegate.swift in Sources */,
+				A9517567263F9546002C919F /* RoomModel.swift in Sources */,
 				A9517523263EAA13002C919F /* TabBarController.swift in Sources */,
 				A9517520263CEC26002C919F /* SendToDBModel.swift in Sources */,
 				A951751A263A5BC5002C919F /* RegisterViewController.swift in Sources */,
