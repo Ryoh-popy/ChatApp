@@ -20,7 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FirebaseApp.configure()
         
-        //TODO ログアウト処理
+//        let firebaseAuth = Auth.auth()
+//        do{
+//            try firebaseAuth.signOut()
+//
+//        } catch let signOutError as NSError{
+//            print ("Error signing out: %@", signOutError)
+//        }
         
         // キーボードに合わせてViewが移動する
         IQKeyboardManager.shared.enable = true
