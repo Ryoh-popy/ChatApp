@@ -11,8 +11,6 @@ import SDWebImage
 
 class ChatViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
-    
-    
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,6 +29,9 @@ class ChatViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         tableView.delegate = self
         tableView.dataSource = self
         
+        // カスタムセルの登録
+        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        
         if UserDefaults.standard.object(forKey: "userImage") != nil {
             
             imageString = UserDefaults.standard.object(forKey: "userImage") as! String
@@ -41,6 +42,9 @@ class ChatViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         }
         
         self.navigationItem.title = roomName
+        
+        // セルのロード
+        loadMessages(roomName: roomName)
         // Do any additional setup after loading the view.
     }
     
@@ -93,7 +97,36 @@ class ChatViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
     
     // セルの中身
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MessageCell
+        
+        let message = messages[indexPath.row]
+        
+        cell.label.text = message.body
+        
+        // 自分が送った場合と相手に送られた場合
+        if message.sender == Auth.auth().currentUser?.email{
+            
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.rightImageView.sd_setImage(with: URL(string: imageString),completed:nil)
+            cell.leftImageView.sd_setImage(with: URL(string: messages[indexPath.row].imageString), completed: nil)
+            
+            cell.backView.backgroundColor = .systemTeal
+            cell.label.textColor = .white
+        
+        }else{
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.rightImageView.sd_setImage(with: URL(string: imageString),completed:nil)
+            cell.leftImageView.sd_setImage(with: URL(string: messages[indexPath.row].imageString), completed: nil)
+            
+            cell.backView.backgroundColor = .orange
+            cell.label.textColor = .white
+        }
+        
+        return cell
+        
     }
     
     @IBAction func send(_ sender: Any) {
