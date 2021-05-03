@@ -10,11 +10,11 @@ import Firebase
 // Firebaseで事足りるが一応インポート
 import FirebaseAuth
 
-class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,SendProfileOKDelegate {
+class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,SendProfileOKDelegate,UITextFieldDelegate {
 
     
     
-    @IBOutlet weak var emalTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     
@@ -28,15 +28,26 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,U
         checkModel.showCheckPermission()
         sendToDBModel.sendProfileOKDelegate = self
         
+        // キーボード閉じる
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        
         // Do any additional setup after loading the view.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
+    
     @IBAction func SignUp(_ sender: Any) {
         //emalTextFieldgとpasswordTextFieldが空でない場合
-        if emalTextField.text?.isEmpty != true && passwordTextField.text?.isEmpty != true , let image = profileImageView.image{
+        if emailTextField.text?.isEmpty != true && passwordTextField.text?.isEmpty != true , let image = profileImageView.image{
             
             // ユーザーを作る
-            Auth.auth().createUser(withEmail: emalTextField.text!, password: passwordTextField.text!){(result,error) in
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){(result,error) in
                 
                 if error != nil{
                     print(error.debugDescription)
