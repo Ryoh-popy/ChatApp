@@ -81,11 +81,17 @@ class ChatViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         }
     }
     
-    
+    // セルの数＝メッセージの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        return messages.count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // セルの中身
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
     }

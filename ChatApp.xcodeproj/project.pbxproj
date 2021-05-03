@@ -20,6 +20,8 @@
 		A9517523263EAA13002C919F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517522263EAA13002C919F /* TabBarController.swift */; };
 		A9517526263ECC16002C919F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517525263ECC16002C919F /* ChatViewController.swift */; };
 		A9517529263F5B92002C919F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517528263F5B91002C919F /* Message.swift */; };
+		A951755B263F79DB002C919F /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9517559263F79DB002C919F /* MessageCell.swift */; };
+		A951755C263F79DB002C919F /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A951755A263F79DB002C919F /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		A9517522263EAA13002C919F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A9517525263ECC16002C919F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A9517528263F5B91002C919F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A9517559263F79DB002C919F /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		A951755A263F79DB002C919F /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		AD30420497CF8CE323FE2FC6 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +93,8 @@
 				A9517518263A5B77002C919F /* Model */,
 				A9517516263A5B4D002C919F /* Controller */,
 				A92F5EDC2635008500FF84DF /* Main.storyboard */,
+				A9517559263F79DB002C919F /* MessageCell.swift */,
+				A951755A263F79DB002C919F /* MessageCell.xib */,
 				A92F5EDF2635008800FF84DF /* Assets.xcassets */,
 				A92F5EE12635008800FF84DF /* LaunchScreen.storyboard */,
 				A92F5EE42635008800FF84DF /* Info.plist */,
@@ -185,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A92F5EE32635008800FF84DF /* LaunchScreen.storyboard in Resources */,
+				A951755C263F79DB002C919F /* MessageCell.xib in Resources */,
 				A92F5EE02635008800FF84DF /* Assets.xcassets in Resources */,
 				A92F5EDE2635008500FF84DF /* Main.storyboard in Resources */,
 			);
@@ -244,6 +251,7 @@
 				A9517526263ECC16002C919F /* ChatViewController.swift in Sources */,
 				A9517529263F5B92002C919F /* Message.swift in Sources */,
 				A92F5ED72635008500FF84DF /* AppDelegate.swift in Sources */,
+				A951755B263F79DB002C919F /* MessageCell.swift in Sources */,
 				A92F5ED92635008500FF84DF /* SceneDelegate.swift in Sources */,
 				A9517523263EAA13002C919F /* TabBarController.swift in Sources */,
 				A9517520263CEC26002C919F /* SendToDBModel.swift in Sources */,
