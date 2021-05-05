@@ -82,6 +82,10 @@
                                     <outletCollection property="gestureRecognizers" destination="9tr-Hj-pDa" appends="YES" id="hTG-75-TE0"/>
                                 </connections>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="CK6-yN-83S">
+                                <rect key="frame" x="177" y="348" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rI2-4n-D5B"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
@@ -89,6 +93,7 @@
                     <navigationItem key="navigationItem" id="Qp6-xg-ZM2"/>
                     <connections>
                         <outlet property="emailTextField" destination="18k-l3-pgN" id="85a-4T-VeT"/>
+                        <outlet property="indicator" destination="CK6-yN-83S" id="US5-c5-OLD"/>
                         <outlet property="passwordTextField" destination="PQX-jJ-45v" id="jCR-AA-Arw"/>
                         <outlet property="profileImageView" destination="y4p-p6-ocv" id="qmn-hm-M3x"/>
                         <segue destination="ags-ez-eae" kind="show" identifier="chat" id="DpD-WK-EPv"/>
