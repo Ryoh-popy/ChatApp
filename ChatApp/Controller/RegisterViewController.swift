@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,U
 
     
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -23,6 +24,8 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        indicator.isHidden = true
         
         let checkModel = CheckPermission()
         checkModel.showCheckPermission()
@@ -43,6 +46,10 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate,U
     
     
     @IBAction func SignUp(_ sender: Any) {
+        
+        indicator.isHidden = false
+        indicator.startAnimating()
+
         //emalTextFieldgとpasswordTextFieldが空でない場合
         if emailTextField.text?.isEmpty != true && passwordTextField.text?.isEmpty != true , let image = profileImageView.image{
             
